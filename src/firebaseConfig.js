@@ -1,16 +1,9 @@
 import firebase from 'firebase'
 import 'firebase/firestore'
+import firebaseCredentials from 'firebaseCredentials'
 
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyBeGfOkiTnxwbq5pLShaia0fE8NRJyLhNs",
-    authDomain: "vuefb-1944b.firebaseapp.com",
-    databaseURL: "https://vuefb-1944b.firebaseio.com",
-    projectId: "vuefb-1944b",
-    storageBucket: "vuefb-1944b.appspot.com",
-    messagingSenderId: "650378348422"
-};
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseCredentials);
 
 // firebase utils
 const db = firebase.firestore()

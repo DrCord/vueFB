@@ -1,3 +1,5 @@
+/src/firebaseCredentials.js
+
 .DS_Store
 node_modules
 /dist
