@@ -135,9 +135,9 @@
             signup() {
                 this.performingRequest = true
                 fb.auth.createUserWithEmailAndPassword(this.signupForm.email, this.signupForm.password).then(user => {
-                    this.$store.commit('setCurrentUser', user)
+                    this.$store.commit('setCurrentUser', user.user)
                     // create user obj
-                    fb.usersCollection.doc(user.uid).set({
+                    fb.usersCollection.doc(user.user.uid).set({
                         name: this.signupForm.name,
                         title: this.signupForm.title
                     }).then(() => {
